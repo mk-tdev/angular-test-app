@@ -1,1 +1,14 @@
-<p>card works!</p>
+<div class="card">
+  <div class="header">Card header</div>
+
+  <div>
+    <p>Default content</p>
+    <img src="https://placehold.co/300x200" />
+
+    <!-- <ng-content> </ng-content> -->
+    <ng-content select=".first"></ng-content>
+  </div>
+
+  <div class="footer">Card footer</div>
+</div>
+<ng-content select=".extra"></ng-content>

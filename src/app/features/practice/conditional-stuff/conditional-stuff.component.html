@@ -1,0 +1,33 @@
+<h2>If condition</h2>
+
+<div *ngIf="showFirstSection">
+  <p>First Section</p>
+</div>
+
+<div *ngIf="showSecondSection">
+  <p>Second Section</p>
+</div>
+<hr />
+
+<hr />
+<h3>Ng template using if else (ng-container)</h3>
+<ng-container
+  *ngIf="showFirstSection; then thenTemplate; else elseTemplate"
+></ng-container>
+
+<ng-template #thenTemplate> If condition content </ng-template>
+<ng-template #elseTemplate> Else condition content </ng-template>
+<hr />
+<h3>Switch condition</h3>
+<span [ngSwitch]="favColor">
+  <p *ngSwitchCase="'blue'">
+    <span [ngStyle]="{ color: 'blue' }">Blue</span> is my favorite color
+  </p>
+  <p *ngSwitchCase="'red'">Blue is my favorite color</p>
+  <p *ngSwitchDefault>I dont have any favorite color</p>
+</span>
+<hr />
+<h3>Listing fruits with NgFor</h3>
+<div *ngFor="let fruit of favFruits; let i = index">
+  <p>{{ fruit }}</p>
+</div>

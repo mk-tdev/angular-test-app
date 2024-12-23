@@ -1,0 +1,24 @@
+<p>template-stuff works!</p>
+
+<h3>ng template</h3>
+<ng-template #testTemplate>
+  <p>I am a ng template content</p>
+</ng-template>
+<hr />
+<div>
+  <h4>Let's use ng-template</h4>
+
+  <span *ngTemplateOutlet="testTemplate"></span>
+  <span *ngTemplateOutlet="testTemplate"></span>
+</div>
+
+<hr />
+
+<h3>Ng content</h3>
+
+<app-card>
+  <p class="first">
+    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, cumque.
+  </p>
+  <p class="extra">Extra element for card</p>
+</app-card>
