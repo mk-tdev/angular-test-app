@@ -1,6 +1,37 @@
 <p>template-stuff works!</p>
 
-<h3>ng template</h3>
+<h3>Pipes</h3>
+
+<div class="part">
+  <p>Amount: {{ amount | currency }}</p>
+  <p>Amount: {{ company | uppercase }}</p>
+  <p>Amount: {{ purchasedOn | date }}</p>
+</div>
+
+<h3>Directives</h3>
+<div class="part">
+  <p [ngClass]="counter > 5 ? 'danger' : ''">Counter value: {{ counter }}</p>
+  <p [ngStyle]="counter > 5 ? { color: 'red' } : { color: 'green' }">
+    Counting counter {{ counter }}
+  </p>
+
+  <button type="button" (click)="incrementCounter()">Increment</button>
+  <button type="button" (click)="decrementCounter()">Decrement</button>
+</div>
+
+<h3 id="someid">NgModal</h3>
+<div class="part">
+  <input type="text" [(ngModel)]="someName" />
+
+  <p>What you are typing is {{ someName }}</p>
+</div>
+
+<h3>Custom directives</h3>
+<div class="part">
+  <p appHighlight>Highlight me!</p>
+</div>
+
+<!-- <h3>ng template</h3>
 <ng-template #testTemplate>
   <p>I am a ng template content</p>
 </ng-template>
@@ -21,4 +52,4 @@
     Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam, cumque.
   </p>
   <p class="extra">Extra element for card</p>
-</app-card>
+</app-card> -->
