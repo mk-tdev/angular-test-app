@@ -4,6 +4,7 @@ import { TemplateStuffComponent } from './template-stuff/template-stuff.componen
 import { CommonModule } from '@angular/common';
 import { TestLCComponent } from '../../components/test-lc/test-lc.component';
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-practice',
@@ -13,6 +14,7 @@ import { FormsModule } from '@angular/forms';
     CommonModule,
     TestLCComponent,
     FormsModule,
+    RouterModule,
   ],
   templateUrl: './practice.component.html',
   styleUrl: './practice.component.scss',

@@ -1,1 +1,24 @@
-<p>user-list works!</p>
+<h3>Users List</h3>
+
+<div class="user-list">
+  <div *ngFor="let user of userData">
+    <div class="user-item" (click)="getUserDetails(user.id)">
+      <div class="">{{ user.name }}</div>
+      <div class="">{{ user.email }}</div>
+    </div>
+  </div>
+</div>
+
+<div class="user-detail">
+  <div *ngIf="selectedUser">
+    <h3>Selected User details</h3>
+
+    <div class="">{{ selectedUser?.name }}</div>
+    <div class="">{{ selectedUser?.email }}</div>
+    <div class="">{{ selectedUser?.phone }}</div>
+    <div class="">{{ selectedUser?.website }}</div>
+    <div class="">
+      {{ selectedUser?.address?.street }} - {{ selectedUser?.address?.zipcode }}
+    </div>
+  </div>
+</div>
