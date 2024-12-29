@@ -6,6 +6,7 @@ import { TestLCComponent } from '../../components/test-lc/test-lc.component';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
+
 @Component({
   selector: 'app-practice',
   imports: [
@@ -20,10 +21,5 @@ import { RouterModule } from '@angular/router';
   styleUrl: './practice.component.scss',
 })
 export class PracticeComponent {
-  showTestChild = true;
-  someTestName = '';
-
-  toggleTestChild() {
-    this.showTestChild = !this.showTestChild;
-  }
+  
 }

@@ -7,6 +7,7 @@ import { NotfoundComponent } from './components/notfound/notfound.component';
 import { ConditionalStuffComponent } from './features/practice/conditional-stuff/conditional-stuff.component';
 import { TemplateStuffComponent } from './features/practice/template-stuff/template-stuff.component';
 import { userListGuardGuard } from './guards/user-list-guard.guard';
+import { ObservablePracticeComponent } from './features/practice/observable-practice/observable-practice.component';
 
 export const routes: Routes = [
   {
@@ -19,10 +20,18 @@ export const routes: Routes = [
     title: 'Todo',
     component: TodoListComponent,
   },
+  // {
+  //   path: 'list',
+  //   title: 'List',
+  //   canActivate: [userListGuardGuard],
+  //   loadComponent: () =>
+  //     import('./features/user-list/user-list.component').then(
+  //       (c) => c.UserListComponent
+  //     ),
+  // },
   {
     path: 'list',
     title: 'List',
-    canActivate: [userListGuardGuard],
     loadComponent: () =>
       import('./features/user-list/user-list.component').then(
         (c) => c.UserListComponent
@@ -42,9 +51,13 @@ export const routes: Routes = [
         component: TemplateStuffComponent,
       },
       {
-        path: '**',
-        component: TemplateStuffComponent,
+        path: 'observables',
+        component: ObservablePracticeComponent,
       },
+      // {
+      //   path: '**',
+      //   component: TemplateStuffComponent,
+      // },
     ],
   },
   {

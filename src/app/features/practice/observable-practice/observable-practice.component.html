@@ -1,0 +1,24 @@
+<h3>Test</h3>
+
+<div>
+  <p>Some numbers{{ someNumbers }}</p>
+
+  <p>Some numbers first two: {{ localfirstTwoNumbers$ | async }}</p>
+
+  <p>Print with loop</p>
+  <div *ngIf="localfirstTwoNumbers$ | async as firstTwoNumbers">
+    <div *ngFor="let number of firstTwoNumbers">
+      {{ number }}
+    </div>
+  </div>
+
+  <p>Seconds {{ secondsData }}</p>
+
+  <p>Direct use in template second: {{ localSeconds$ | async }}</p>
+
+  <div *ngIf="userData$ | async as userData">
+    <div *ngFor="let user of userData">
+      <p>{{ user.id }}:{{ user.name }}:{{ user.email }}</p>
+    </div>
+  </div>
+</div>
