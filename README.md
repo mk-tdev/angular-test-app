@@ -62,3 +62,14 @@ For more information on using the Angular CLI, including detailed command refere
 
 Testable, Reusable, Maintainable code
 Avoiding tight coupling (easy to maintain overtime)
+
+## Observables in Angular
+
+Observables are a powerful tool in Angular for handling asynchronous data streams. They provide a flexible and efficient way to manage data that arrives over time, such as user input, HTTP responses, and timer events.
+
+Key Concepts:
+
+- Observable: An Observable is like a stream that can emit multiple values over time. It doesn't emit values until you subscribe to it.
+- Subscriber: A Subscriber is an object that receives notifications from an Observable. It has methods to handle the next value, error, and completion notifications.
+- Subscription: The act of connecting a Subscriber to an Observable is called subscribing. When you subscribe, the Observable starts emitting values, and the Subscriber receives them.
+- Operators: RxJS (Reactive Extensions for JavaScript) provides a rich set of operators that allow you to transform and combine Observables in various ways.
