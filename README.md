@@ -73,3 +73,12 @@ Key Concepts:
 - Subscriber: A Subscriber is an object that receives notifications from an Observable. It has methods to handle the next value, error, and completion notifications.
 - Subscription: The act of connecting a Subscriber to an Observable is called subscribing. When you subscribe, the Observable starts emitting values, and the Subscriber receives them.
 - Operators: RxJS (Reactive Extensions for JavaScript) provides a rich set of operators that allow you to transform and combine Observables in various ways.
+
+## Todo application
+
+- components
+- one-way/two-way binding
+- data sharing/communication with @Input, @Output
+- events
+- services
+- observables
